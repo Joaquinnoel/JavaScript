@@ -100,29 +100,44 @@ let cadenaFrutas3 = tiposDeFrutas3.join(" - ");
 console.log(cadenaFrutas3); // Imprime "manzana - banana - cereza"
 
 
-//ARRAY DE OBJETOS
-let arrayObjetos = [];
-arrayObjectos.push({
+//ARRAY DE OBJETOS: Son la representación de un objeto en un array
+const alumnos = {
+    id: "123",
     nombre: "Juan",
-    edad:30,
-    profesion: "progamador"
-
-})
-arrayObjectos.push({
-    nombre: "Juan",
-    edad:30,
-    profesion: "Tecnico en computación" 
-
-})
-arrayObjectos.push({
-    nombre: "Juan",
-    edad:30,
-    profesion: "Medico"
-
-})
-console.log(arrayObjetos);
-
-for (let objetos of arrayObjetos) {
-    console.log(objetos.profesion);
-    
+    curso: ["React"],
+    estaAlDia: true,
+    edad: 20,
+    domicilio: {
+        calle: "Argerich 1844",
+        ciudad: "Buenos Aires",
+    }
 }
+
+console.log(alumnos.nombre)
+console.log(alumnos.domicilio.calle);
+alumnos.curso.includes("JavaScript");
+console.log(alumnos.apellido); // Imprime undefined porque no existe la propiedad "apellido"    
+
+
+//Metodo Find: Busca un elemento en un array que cumpla con una condición específica
+const estudiantes = [
+    { id: 1, nombre: "Ana", edad: 22 },
+    { id: 2, nombre: "Luis", edad: 20 },
+    { id: 3, nombre: "Pedro", edad: 23 }
+];
+
+const alumnoEncontrado= estudiantes.find((alumnos) => {
+    return alumnos.nombre === "Luis";
+})
+
+console.log(alumnoEncontrado); // Imprime el objeto del alumno con nombre "Luis"
+
+
+
+//CLASE VIRTUAL EJEMPLOS Y ACTIVIDADES
+
+
+
+//Metodo Split: Separa en base a un caracter por parametro --> Devuelve un array
+//2025/6/3 --> split("/") --> [2025, 6, 3] --> reverse() --> [3, 6, 2025] --> join("-") --> "3-6-2025"
+
